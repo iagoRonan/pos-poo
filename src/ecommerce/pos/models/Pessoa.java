@@ -2,7 +2,7 @@ package ecommerce.pos.models;
 
 public abstract class Pessoa { //classe abstrata n�o pode ser instanciada
 	
-	protected int codigo;
+	protected Integer codigo;
 	protected Contato contato; 		// Agrega��o de Contato � parte de do Todo Pessoa
 	protected Endereco endereco; 	// Agrega��o de Endere�o � parte de do Todo Pessoa
 
@@ -19,11 +19,15 @@ public abstract class Pessoa { //classe abstrata n�o pode ser instanciada
 		return endereco;
 	}
 
-	public int getCodigo() {
-		return codigo;}
+    public Integer getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
+    }
+
 	
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;}
 	
 	public void AdicionaContato(String telefone, String email){
 		this.contato = new Contato(telefone,email);	// instanciando objeto Contato	
