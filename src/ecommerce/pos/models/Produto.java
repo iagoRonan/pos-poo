@@ -1,7 +1,7 @@
 package ecommerce.pos.models;
 
 public class Produto {
-    private int codigo;
+    private Integer codigo;
     private String Descricao;
     private float valorProduto;
     private enum genero{componetes, perifericos, conectivade, seguranca, automacao, multimidia}; //Usso de Enumeradores para descriminar tipos comuns de mercadoris;
@@ -47,10 +47,10 @@ genero tipo;
 		this.tipo = tipo;
 	}
 
-		public int getCodigo() {
+		public Integer getCodigo() {
 			return codigo;
 		}
-		public void setCodigo(int codigo) {
+		public void setCodigo(Integer codigo) {
 			this.codigo = codigo;
 		}
 		public String getDescricao() {

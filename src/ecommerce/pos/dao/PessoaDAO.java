@@ -1,6 +1,7 @@
 package ecommerce.pos.dao;
 
 import ecommerce.pos.models.Pessoa;
+import ecommmerce.pos.execoes.ExcecaoBuscar;
 import ecommmerce.pos.execoes.ExcecaoEdicao;
 import ecommmerce.pos.execoes.ExcecaoExcluir;
 import java.util.ArrayList;
@@ -54,12 +55,11 @@ public class PessoaDAO {
         
         if (codigo != null) {
             for (Pessoa p : listaPessoas) {
-                /*(if (p.getCodigo().equals(codigo) {
-                    return p; //aliasing?                    
-                }*/
+                if (codigo == p.getCodigo())
+                    return p;                
             }
         }else{
-            
+            throw new ExcecaoBuscar();
         }
         
         return null;

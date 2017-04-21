@@ -2,21 +2,22 @@ package ecommerce.pos.models;
 
 public class FormaPagamento {
 
-	private int codPagamento;
+	private Integer codigo;
 	private String dataPagamento;
 	private boolean confirmacaoPagamento = false;
 	
-	public FormaPagamento(int codPagamento) {
-		this.codPagamento = codPagamento;
+	public FormaPagamento(Integer codigo) {
+		this.codigo = codigo;
 	}
 
-	public int getCodPagamento() {
-		return codPagamento;
-	}
-	public void setCodPagamento(int codPagamento) {
-		this.codPagamento = codPagamento;
-	}
-	
+    public Integer getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
+    }
+
 	public String getDataPagamento() {
 		return dataPagamento;
 	}
@@ -36,7 +37,7 @@ public class FormaPagamento {
 
 	@Override
 	public String toString() {
-		return "FormaPagamento [codPagamento: " + codPagamento + "\n dataPagamento=" + dataPagamento
+		return "FormaPagamento [codPagamento: " + codigo + "\n dataPagamento=" + dataPagamento
 				+ ", confirmacaoPagamento=" + confirmacaoPagamento + "]";
 	}
 	
