@@ -30,6 +30,11 @@ public class FLogin extends javax.swing.JFrame {
         btLogin.setText("Entrar");
 
         btRegistrar.setText("Registrar");
+        btRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btRegistrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -71,6 +76,10 @@ public class FLogin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRegistrarActionPerformed
+        new FCadastro(this).setVisible(true);        
+    }//GEN-LAST:event_btRegistrarActionPerformed
 
     public static void main(String args[]) {
         try {

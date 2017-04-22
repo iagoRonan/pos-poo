@@ -2,8 +2,7 @@ package ecommerce.pos.models;
 
 interface IFacade {
 
-    void incializarProdutos();
-    
+    void incializarProdutos();    
     
     // metodos de pessoa
     void cadastrar(Pessoa pessoa);

@@ -28,10 +28,12 @@ public class ClasseTestadora {
                                 
 
 		// algumas forma de pagamento
-		FormaPagamento Pagamento1 = new CartaoCredito(1,"visa","credito", 3, "Mariano Ribeiro", "10/10/23", "54212345212","132");
+		/*FormaPagamento Pagamento1 = new CartaoCredito(1,"visa","credito", 3, "Mariano Ribeiro", "10/10/23", "54212345212","132");
 		FormaPagamento Pagamento2 = new CartaoCredito(2,"mastercard","debito", 1, "Juliana Marinalva", "12/09/29", "232356789","787");
 		FormaPagamento Pagamento3 = new Boleto(3,"19/04/2017","12345678912","Sanatander");
-		FormaPagamento Pagamento4 = new Boleto(4,"20/04/2017","12232344423","Banco do Brasil");		
+		FormaPagamento Pagamento4 = new Boleto(4,"20/04/2017","12232344423","Banco do Brasil");		*/
+                
+                
 		//------------------------------------------------------------------------------------------------------------------------
 		// criando um pedido com cliente e numero de itemens
 		Pedido pedido1 = new Pedido(30,PF1,3);
@@ -49,7 +51,7 @@ public class ClasseTestadora {
 		pedido1.AdicionandoItemLista(item5,2);*/
 				
 		//forma de pagamento para o pedido 1
-		pedido1.setPagamento(Pagamento3);
+		//pedido1.setPagamento(Pagamento3);
 
 		// Mostrar dados
 		pedido1.mostrarPedido();
