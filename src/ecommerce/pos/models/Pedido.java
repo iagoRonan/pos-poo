@@ -4,16 +4,20 @@ public class Pedido {
 	// Encapsulamento de todos os atributos;
 	private int codPedido;
 	private Pessoa cliente;
-	private ItemPedido Itens[];	// vetor Utilizado para armazenar os produtos do pedido;
+	private ItemPedido itens[];	// vetor Utilizado para armazenar os produtos do pedido;
 	private FormaPagamento pagamento;
 	private float valorTotal;
 	
 	//Contrutor 1
 	public Pedido(int codPedido, Pessoa cliente, int qtd) {
-		this.codPedido = codPedido;
-		Itens = new ItemPedido[qtd];
-		this.cliente = cliente;
-		}
+            this.codPedido = codPedido;
+            itens = new ItemPedido[qtd];
+            this.cliente = cliente;
+        }
+        
+        public Pedido() {
+	
+        }
 	
 	public FormaPagamento getPagamento() {
 		return pagamento;
@@ -40,11 +44,11 @@ public class Pedido {
 	}
 
 	public ItemPedido[] getListaItens() {
-		return Itens;
+		return itens;
 	}
 
-	public void AdicionandoItemLista(ItemPedido Itens, int posicao) {
-		this.Itens[posicao] = Itens;
+	public void AdicionandoItemLista(ItemPedido item) {            
+            this.itens[this.itens.length] = item;
 	}
 	
 	
@@ -58,8 +62,8 @@ public class Pedido {
 
 	public float CalculoValorTotal() {
 		this.valorTotal = 0;
-		for (int x=0;x<Itens.length;x++){
-		this.valorTotal = this.valorTotal + this.Itens[x].getsubtotal();}
+		for (int x=0;x<itens.length;x++){
+		this.valorTotal = this.valorTotal + this.itens[x].getsubtotal();}
 		return valorTotal;
 	}
 
@@ -67,7 +71,7 @@ public class Pedido {
 		float total = 0;
         for(float d: subtotal)
         total+=d;	 // Somando os argumentos
-        return total; // Retornando a média
+        return total; // Retornando a mï¿½dia
   }
 
 	public static float desconto(float valor, float taxa){
@@ -81,13 +85,13 @@ public class Pedido {
 		System.out.println("<----------------------------Dados do cliente: ------------------------------>");
 		cliente.mostrardados();
 		System.out.println("<-----------------------------Dados do pedido: ------------------------------>");
-		for (int x=0;x<Itens.length;x++){	
-			System.out.print("Itens: "+ this.Itens[x].getProduto().getDescricao() + "			");
-			System.out.println("genero: "+ this.Itens[x].getProduto().getTipo()+ "			");
-			System.out.println("subtotal: "+ this.Itens[x].getsubtotal());
+		for (int x=0;x<itens.length;x++){	
+			System.out.print("Itens: "+ this.itens[x].getProduto().getDescricao() + "			");
+			System.out.println("genero: "+ this.itens[x].getProduto().getTipo()+ "			");
+			System.out.println("subtotal: "+ this.itens[x].getsubtotal());
 			}
-		if(this.Itens.length == 5){
-		System.out.println("Total:	"+ this.CalculoValorTotal2(this.Itens[0].getsubtotal(),this.Itens[1].getsubtotal(),this.Itens[2].getsubtotal(),this.Itens[3].getsubtotal(),this.Itens[4].getsubtotal(),this.Itens[5].getsubtotal()));
+		if(this.itens.length == 5){
+		System.out.println("Total:	"+ this.CalculoValorTotal2(this.itens[0].getsubtotal(),this.itens[1].getsubtotal(),this.itens[2].getsubtotal(),this.itens[3].getsubtotal(),this.itens[4].getsubtotal(),this.itens[5].getsubtotal()));
 		}else{System.out.println("Total:  "+ this.CalculoValorTotal());}
 		System.out.println("<---------------------------Dados Forma de Pagamento: ----------------------->");
 		System.out.println(pagamento.toString());

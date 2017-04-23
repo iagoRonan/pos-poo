@@ -9,12 +9,12 @@ public class ClasseTestadora {
 		// criando cliente pessoa Fisica
 		Pessoa PF1 = new PessoaFisica(1,"Michel","31/03/1988","15785465-01","145.217.365-54");
 		PF1.AdicionaContato("898","222");
-		PF1.AdicionaEndereco("avenida das gar�as", 1110, "padre cicero", "petrolina", "PE", "56326000");
+		PF1.AdicionaEndereco("avenida das gar�as", "1110", "padre cicero", "petrolina", "PE", "56326000");
 		
 		// criando cliente pessoa Juridica
 		Pessoa PJ1 = new PessoaJuridica(2,"Tectronic","TECLTDA","10-1009290/0001");
 		PJ1.AdicionaContato("00000","11111");
-		PJ1.AdicionaEndereco("avenida do bambu", 878, "jo�oo pio 10", "juazeiro", "BA", "56326000");
+		PJ1.AdicionaEndereco("avenida do bambu", "878", "jo�oo pio 10", "juazeiro", "BA", "56326000");
 		
 		// criando objetos produtoodutos
 		/*Produto produto1 = new Produto(10, "impressora",35,1,100);
@@ -24,7 +24,7 @@ public class ClasseTestadora {
 		Produto produto5 = new Produto(14, "Mouse multilaser",25,5,90);*/
                 
                 Facade fachada = new Facade();
-                fachada.incializarProdutos();
+                //fachada.incializarProdutos();
                                 
 
 		// algumas forma de pagamento

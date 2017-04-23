@@ -1,13 +1,30 @@
 package ecommerce.pos;
 
+import ecommerce.pos.models.Facade;
 import ecommerce.pos.models.Pessoa;
+import ecommerce.pos.models.PessoaFisica;
+import ecommerce.pos.models.PessoaJuridica;
+import javax.swing.JOptionPane;
 
 public class FLogin extends javax.swing.JFrame {
 
     private Pessoa pessoa;
+    private String login;
+    private String senha;
+    private Facade fachada;
     
-    public FLogin() {
+    public FLogin() {        
         initComponents();
+        configurar();
+    }
+    
+    private void configurar(){        
+        fachada = new Facade();
+    }
+    
+    private void formParaObjeto(){        
+        login = tfLogin.getText();
+        senha = tfSenha.getText();
     }
 
     @SuppressWarnings("unchecked")
@@ -22,12 +39,18 @@ public class FLogin extends javax.swing.JFrame {
         btRegistrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setText("Login");
 
         jLabel2.setText("Senha");
 
         btLogin.setText("Entrar");
+        btLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btLoginActionPerformed(evt);
+            }
+        });
 
         btRegistrar.setText("Registrar");
         btRegistrar.addActionListener(new java.awt.event.ActionListener() {
@@ -78,8 +101,31 @@ public class FLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRegistrarActionPerformed
-        new FCadastro(this).setVisible(true);        
+        new FCadastro(this, fachada).setVisible(true);
     }//GEN-LAST:event_btRegistrarActionPerformed
+
+    private void btLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLoginActionPerformed
+        
+        formParaObjeto();
+        pessoa = fachada.buscarPessoaPorLoginSenha(login,senha);
+        
+        String msg;                    
+        if (pessoa != null){
+            msg = "Bem Vindo, ";
+            if (pessoa instanceof PessoaFisica)
+                msg += ((PessoaFisica)pessoa).getNome() + "!";
+            else
+                msg += ((PessoaJuridica)pessoa).getNomefantasia() + "!";
+            
+            JOptionPane.showMessageDialog(this, msg);
+        }else{
+            JOptionPane.showMessageDialog(this, "Login ou senha inválidos!");
+        }
+        
+        new FPedido(fachada).setVisible(true);
+        setVisible(false);
+        
+    }//GEN-LAST:event_btLoginActionPerformed
 
     public static void main(String args[]) {
         try {

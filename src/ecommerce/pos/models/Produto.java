@@ -20,10 +20,11 @@ public class Produto {
             //this.obtergenero(generoItem);
     }
 
-    public Produto(int codigo, String descricao, float valorProduto, GeneroProduto generoItem, int qtdProduto) { // construtor utilizado para uma inser��o em estoque
+    public Produto(int codigo, String descricao, float valorProduto, GeneroProduto tipo, int qtdProduto) { // construtor utilizado para uma inser��o em estoque
             this.codigo = codigo;
             this.Descricao = descricao;
             this.valorProduto = valorProduto;
+            this.tipo = tipo;
             //this.obtergenero(generoItem);
             this.qtdProduto = qtdProduto;
     }

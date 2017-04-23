@@ -2,22 +2,31 @@ package ecommerce.pos.models;
 
 public abstract class Pessoa { //classe abstrata n�o pode ser instanciada
 	
-	protected Integer codigo;
-	protected Contato contato; 		// Agrega��o de Contato � parte de do Todo Pessoa
-	protected Endereco endereco; 	// Agrega��o de Endere�o � parte de do Todo Pessoa
+    private Integer codigo;
+    private String login;
+    private String senha;
+    private Contato contato; 		// Agrega��o de Contato � parte de do Todo Pessoa
+    private Endereco endereco; 	// Agrega��o de Endere�o � parte de do Todo Pessoa
 
-	// construtor da classe Pessoa
-	public Pessoa(int codigo) {
-		this.codigo = codigo;
-	}
-	
-	public Contato getContato() {
-		return contato;
-	}
+    // construtor da classe Pessoa
+    public Pessoa(int codigo) {
+        this.codigo = codigo;
+        contato = new Contato();
+        endereco = new Endereco();
+    }
 
-	public Endereco getEndereco() {
-		return endereco;
-	}
+    public Pessoa() {
+        contato = new Contato();
+        endereco = new Endereco();
+    }
+
+    public Contato getContato() {
+            return contato;
+    }
+
+    public Endereco getEndereco() {
+            return endereco;
+    }
 
     public Integer getCodigo() {
         return codigo;
@@ -27,13 +36,29 @@ public abstract class Pessoa { //classe abstrata n�o pode ser instanciada
         this.codigo = codigo;
     }
 
-	
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    
 	
 	public void AdicionaContato(String telefone, String email){
 		this.contato = new Contato(telefone,email);	// instanciando objeto Contato	
 	}
 	
-	public void AdicionaEndereco(String logradouro, int numero, String bairro, String cidade, String estado, String cep) {
+	public void AdicionaEndereco(String logradouro, String numero, String bairro, String cidade, String estado, String cep) {
 		this.endereco = new Endereco(logradouro,numero,bairro,cidade,estado,cep); // Instanciando Objeto Endere�o
 		}
 

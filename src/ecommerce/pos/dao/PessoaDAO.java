@@ -1,6 +1,7 @@
 package ecommerce.pos.dao;
 
 import ecommerce.pos.models.Pessoa;
+import ecommerce.pos.models.PessoaFisica;
 import ecommmerce.pos.execoes.ExcecaoBuscar;
 import ecommmerce.pos.execoes.ExcecaoEdicao;
 import ecommmerce.pos.execoes.ExcecaoExcluir;
@@ -60,6 +61,19 @@ public class PessoaDAO {
             }
         }else{
             throw new ExcecaoBuscar();
+        }
+        
+        return null;
+    }
+     
+    public Pessoa buscarPessoaPorLoginSenha(String login, String senha){
+        
+        if (login != null && senha != null) {
+            for (Pessoa p : listaPessoas) {
+                if (p.getLogin().equals(login) && p.getSenha().equals(senha)){                    
+                    return p;
+                }                    
+            }
         }
         
         return null;

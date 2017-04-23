@@ -2,7 +2,7 @@ package ecommerce.pos.models;
 
 public class Endereco {
 private String logradouro;
-private int numero;
+private String numero;
 private String bairro;
 private String cidade;
 private String estado;
@@ -12,7 +12,7 @@ private String cep;
 public Endereco() {
 }
 
-public Endereco(String logradouro, int numero, String bairro, String cidade, String estado, String cep) {
+public Endereco(String logradouro, String numero, String bairro, String cidade, String estado, String cep) {
 	this.logradouro = logradouro;
 	this.numero = numero;
 	this.bairro = bairro;
@@ -27,10 +27,10 @@ public String getLogradouro() {
 public void setLogradouro(String logradouro) {
 	this.logradouro = logradouro;
 }
-public int getNumero() {
+public String getNumero() {
 	return numero;
 }
-public void setNumero(int numero) {
+public void setNumero(String numero) {
 	this.numero = numero;
 }
 public String getBairro() {

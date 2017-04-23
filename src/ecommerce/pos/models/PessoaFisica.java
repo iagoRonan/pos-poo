@@ -1,14 +1,18 @@
 package ecommerce.pos.models;
 
 public class PessoaFisica extends Pessoa implements IPessoaAutenticavel{
-// Aqui é uma especialização
+        // Aqui a uma especializacao
 	private String nome;
 	private String datanascimento;
 	private String rg;
 	private String cpf;
 	
+        public PessoaFisica() {
+	
+	}
+        
 	public PessoaFisica(int codigo, String nome, String datanascimento, String rg, String cpf) {
-		super(codigo);	// Herança da super classe pessoa
+		super(codigo);	// Heranca da super classe pessoa
 		this.nome = nome;
 		this.datanascimento = datanascimento;
 		this.rg = rg;
