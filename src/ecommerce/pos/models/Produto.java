@@ -2,8 +2,8 @@ package ecommerce.pos.models;
 
 import ecommerce.pos.enumerador.GeneroProduto;
 
-public class Produto {
-    private Integer codigo;
+public class Produto extends Entidade{
+    
     private String Descricao;
     private float valorProduto;
     //private enum genero{componetes, perifericos, conectivade, seguranca, automacao, multimidia}; //Usso de Enumeradores para descriminar tipos comuns de mercadoris;
@@ -12,16 +12,16 @@ public class Produto {
     private GeneroProduto tipo;
     //genero tipo;
 
-    public Produto(int codigo, String descricao, float valorProduto, GeneroProduto tipo) { // construtor utilizado pela classe itemPedido
-            this.codigo = codigo;
+    public Produto(Integer codigo, String descricao, float valorProduto, GeneroProduto tipo) { // construtor utilizado pela classe itemPedido
+            super.setCodigo(codigo);
             this.Descricao = descricao;
             this.valorProduto = valorProduto;
             this.tipo = tipo;
             //this.obtergenero(generoItem);
     }
 
-    public Produto(int codigo, String descricao, float valorProduto, GeneroProduto tipo, int qtdProduto) { // construtor utilizado para uma inser��o em estoque
-            this.codigo = codigo;
+    public Produto(Integer codigo, String descricao, float valorProduto, GeneroProduto tipo, int qtdProduto) { // construtor utilizado para uma inser��o em estoque
+            super.setCodigo(codigo);
             this.Descricao = descricao;
             this.valorProduto = valorProduto;
             this.tipo = tipo;
@@ -52,13 +52,7 @@ public class Produto {
 	public void setTipo(GeneroProduto tipo) {
 		this.tipo = tipo;
 	}
-
-        public Integer getCodigo() {
-                return codigo;
-        }
-        public void setCodigo(Integer codigo) {
-                this.codigo = codigo;
-        }
+       
         public String getDescricao() {
                 return Descricao;
         }

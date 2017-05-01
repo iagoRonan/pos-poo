@@ -1,32 +1,33 @@
 package ecommerce.pos.models;
 
+import ecommerce.pos.enumerador.TipoBandeiraCartao;
+
 public class CartaoCredito extends FormaPagamento {
 
-	private String bandeira;
+	private TipoBandeiraCartao bandeira;
 	private String operacao;
 	private int QtddVezes;
 	private String titular;
 	private String validade;
 	private String numero;
 	private String codigoSeguranca;
-	
-	
-	public CartaoCredito(int codPagamento,String bandeira, String operacao, int qtddVezes, String titular, String validade, String numero,
+		
+	public CartaoCredito(int codPagamento,TipoBandeiraCartao bandeira, String operacao, int qtddVezes, String titular, String validade, String numero,
 			String codigoSeguranca){
 		super(codPagamento);
 		this.bandeira = bandeira;
 		this.operacao = operacao;
-		QtddVezes = qtddVezes;
+		this.QtddVezes = qtddVezes;
 		this.titular = titular;
 		this.validade = validade;
 		this.numero = numero;
 		this.codigoSeguranca = codigoSeguranca;
 	}
 	
-	public String getBandeira() {
+	public TipoBandeiraCartao getBandeira() {
 		return bandeira;
 	}
-	public void setBandeira(String bandeira) {
+	public void setBandeira(TipoBandeiraCartao bandeira) {
 		this.bandeira = bandeira;
 	}
 	public String getoperacao() {

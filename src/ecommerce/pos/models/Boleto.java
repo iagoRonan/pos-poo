@@ -1,5 +1,7 @@
 package ecommerce.pos.models;
 
+import ecommerce.pos.enumerador.TipoBanco;
+
 public class Boleto extends FormaPagamento{
 
 	private String dataVencimento;

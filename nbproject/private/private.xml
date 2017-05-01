@@ -3,11 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/models/Facade.java</file>
-            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/models/IFacade.java</file>
-            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/models/ClasseTestadora.java</file>
-            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/models/FormaPagamento.java</file>
-            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/dao/FormaPagamentoDAO.java</file>
+            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/facade/IFacade.java</file>
+            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/FLogin.java</file>
+            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/repositorio/RepositorioPessoa.java</file>
+            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/FConfirmacao.java</file>
+            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/teste/ClasseTestadora.java</file>
+            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/facade/Facade.java</file>
+            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/FPedido.java</file>
+            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/repositorio/RepositorioGenerico.java</file>
+            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/FCadastro.java</file>
+            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/repositorio/interfaces/IRepositorioPessoa.java</file>
+            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/negocio/NegocioPessoa.java</file>
+            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/negocio/NegocioGenerico.java</file>
+            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/models/ItemPedido.java</file>
+            <file>file:/C:/Users/iago/Documents/NetBeansProjects/ecommerce-pos/src/ecommerce/pos/models/Pedido.java</file>
         </group>
     </open-files>
 </project-private>

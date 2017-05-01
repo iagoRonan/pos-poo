@@ -5,7 +5,7 @@
  */
 package ecommerce.pos;
 
-import ecommerce.pos.models.Facade;
+import ecommerce.pos.facade.Facade;
 import ecommerce.pos.models.Pessoa;
 import ecommerce.pos.models.PessoaFisica;
 import ecommerce.pos.models.PessoaJuridica;

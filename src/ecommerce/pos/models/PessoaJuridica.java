@@ -1,5 +1,7 @@
 package ecommerce.pos.models;
 
+import ecommerce.pos.models.interfaces.IPessoaAutenticavel;
+
 public class PessoaJuridica extends Pessoa implements IPessoaAutenticavel {
     
     private String razaosocial;

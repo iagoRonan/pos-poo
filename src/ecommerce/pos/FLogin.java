@@ -1,6 +1,6 @@
 package ecommerce.pos;
 
-import ecommerce.pos.models.Facade;
+import ecommerce.pos.facade.Facade;
 import ecommerce.pos.models.Pessoa;
 import ecommerce.pos.models.PessoaFisica;
 import ecommerce.pos.models.PessoaJuridica;
@@ -118,13 +118,11 @@ public class FLogin extends javax.swing.JFrame {
                 msg += ((PessoaJuridica)pessoa).getNomefantasia() + "!";
             
             JOptionPane.showMessageDialog(this, msg);
+            new FPedido(fachada, pessoa).setVisible(true);
+            setVisible(false);
         }else{
             JOptionPane.showMessageDialog(this, "Login ou senha inválidos!");
-        }
-        
-        new FPedido(fachada).setVisible(true);
-        setVisible(false);
-        
+        }                        
     }//GEN-LAST:event_btLoginActionPerformed
 
     public static void main(String args[]) {

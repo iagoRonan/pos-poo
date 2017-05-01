@@ -1,5 +1,7 @@
 package ecommerce.pos.models;
 
+import ecommerce.pos.models.interfaces.IPessoaAutenticavel;
+
 public class PessoaFisica extends Pessoa implements IPessoaAutenticavel{
         // Aqui a uma especializacao
 	private String nome;
@@ -8,7 +10,7 @@ public class PessoaFisica extends Pessoa implements IPessoaAutenticavel{
 	private String cpf;
 	
         public PessoaFisica() {
-	
+            
 	}
         
 	public PessoaFisica(int codigo, String nome, String datanascimento, String rg, String cpf) {
